@@ -19,5 +19,7 @@ module top_module (
         else
             keep_driving = 0;
     end
-
+/*去掉端口定义的reg型，使用下列两行代码：
+assign shut_off_computer=cpu_overheated? 1:0;
+assign keep_driving=~arrived? ~gas_tank_empty:0;*/
 endmodule
